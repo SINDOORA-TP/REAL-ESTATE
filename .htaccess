@@ -1,0 +1,34 @@
+# Magaram Real Estate - Apache Configuration
+RewriteEngine On
+RewriteBase /
+
+# Force UTF-8 encoding
+AddDefaultCharset UTF-8
+
+# Prevent directory listings
+Options -Indexes
+
+# Security Headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Clean URLs
+# Property detail: /property/the-royal-penthouse -> property.php?slug=the-royal-penthouse
+RewriteRule ^property/([a-zA-Z0-9_-]+)/?$ property.php?slug=$1 [L,QSA]
+
+# Properties listing: /properties -> properties.php
+RewriteRule ^properties/?$ properties.php [L,QSA]
+
+# About: /about -> about.php
+RewriteRule ^about/?$ about.php [L,QSA]
+
+# Services: /services -> services.php
+RewriteRule ^services/?$ services.php [L,QSA]
+
+# Contact: /contact -> contact.php
+RewriteRule ^contact/?$ contact.php [L,QSA]
+

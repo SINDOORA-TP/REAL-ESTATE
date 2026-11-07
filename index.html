@@ -799,7 +799,7 @@ function renderLiveHomepage() {
             container.innerHTML = featured.map(p => `
                 <article class="property-card">
                     <div class="property-image-box">
-                        <img src="${p.cover_image || 'assets/img/property-1.svg'}" alt="${p.title}" loading="lazy">
+                        <img src="${PropertyStore.formatImageURL(p.cover_image)}" alt="${p.title}" loading="lazy" onerror="this.src='assets/img/property-1.svg'">
                         <span class="property-badge">${p.category}</span>
                         <span class="property-status-badge ${p.status === 'Available' ? 'status-available' : (p.status === 'Upcoming' ? 'status-upcoming' : 'status-sold')}">${p.status}</span>
                     </div>

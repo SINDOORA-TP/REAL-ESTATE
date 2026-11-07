@@ -189,7 +189,7 @@ function renderCatalog() {
         return `
             <article class="property-card" data-cat="${p.category}" data-status="${p.status}">
                 <div class="property-image-box">
-                    <img src="${p.cover_image || 'assets/img/property-1.svg'}" alt="${p.title}" loading="lazy">
+                    <img src="${PropertyStore.formatImageURL(p.cover_image)}" alt="${p.title}" loading="lazy" onerror="this.src='assets/img/property-1.svg'">
                     <span class="property-badge">${p.category}</span>
                     <span class="property-status-badge ${statusClass}">${p.status}</span>
                 </div>

@@ -233,7 +233,11 @@ function loadPropertyDetail() {
     document.getElementById('p-beds').textContent = p.bedrooms !== undefined ? p.bedrooms : '-';
     document.getElementById('p-baths').textContent = p.bathrooms !== undefined ? p.bathrooms : '-';
     document.getElementById('p-desc').textContent = p.description || 'Exclusive Coimbatore luxury property.';
-    document.getElementById('p-img').src = p.cover_image || 'assets/img/property-1.svg';
+    const pImg = document.getElementById('p-img');
+    if (pImg) {
+        pImg.src = PropertyStore.formatImageURL(p.cover_image);
+        pImg.onerror = function() { this.src = 'assets/img/property-1.svg'; };
+    }
 
     const statusEl = document.getElementById('p-status');
     const availTag = document.getElementById('p-avail-tag');

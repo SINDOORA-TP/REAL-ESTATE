@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Magaram Real Estate | Curating Extraordinary Living Spaces</title>
+    <meta name="description" content="Bespoke residences, signature penthouses, and prime commercial estates crafted with architectural precision.">
+    
+    <!-- Open Graph / Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Magaram Real Estate | Curating Extraordinary Living Spaces">
+    <meta property="og:description" content="Bespoke residences, signature penthouses, and prime commercial estates crafted with architectural precision.">
+    <meta property="og:image" content="assets/img/hero-bg.svg">
+
+    <!-- Preconnect Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Structured Data (Schema.org RealEstateAgent) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "Magaram Real Estate",
+      "image": "assets/img/magaram-logo.svg",
+      "telephone": "+91 98765 43210",
+      "email": "contact@magaramrealestate.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Magaram Towers, Level 14, Prestige Boulevard, Jubilee Hills, Hyderabad"
+      },
+      "priceRange": "₹₹₹₹"
+    }
+    </script>
+</head>
+<body>
+
+<!-- Global Royal Navigation -->
+<header class="site-header" id="main-header">
+    <div class="container nav-container">
+        <!-- Brand Logo & Monogram -->
+        <a href="index.html" class="brand-logo" aria-label="Magaram Real Estate Home">
+            <img src="assets/img/magaram-logo.svg" alt="Magaram Crest" width="38" height="38">
+            <div class="brand-title">
+                MAGARAM
+                <span class="brand-sub">REAL ESTATE</span>
+            </div>
+        </a>
+
+        <!-- Desktop & Mobile Navigation Links -->
+        <nav class="nav-menu" id="primary-navigation">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="properties.html" class="nav-link">Properties</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- Right Header Actions -->
+        <div class="nav-actions">
+            <a href="tel:+919876543210" class="nav-link phone-link" style="font-size: 0.85rem; color: var(--gold-bright);">
+                +91 98765 43210
+            </a>
+            <button type="button" class="btn btn-primary btn-sm" data-open-modal="modal-site-visit">
+                Book Site Visit
+            </button>
+            <button class="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                &#9776;
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- ---------------- 1. Hero Section ---------------- -->
+<section class="hero-section" style="background-image: url('assets/img/hero-bg.svg');">
+    <div class="hero-overlay"></div>
+    
+    <!-- Canvas Gold Dust Sparkle Particle Layer -->
+    <canvas id="hero-sparkle-canvas"></canvas>
+
+    <div class="container hero-content">
+        <!-- Location Pill -->
+        <div class="location-pill">
+            <span class="pill-dot"></span>
+            JUBILEE HILLS, HYDERABAD
+        </div>
+
+        <!-- Two-Tone Headline -->
+        <h1 class="hero-headline">
+            <span class="headline-cream">Experience</span>
+            <span class="gold-shimmer-text headline-gold">Luxury Living</span>
+        </h1>
+
+        <!-- Subtext -->
+        <p class="hero-subtext">
+            Bespoke residences, signature penthouses, and prime commercial estates crafted with architectural precision.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-buttons">
+            <button type="button" class="btn btn-primary" data-open-modal="modal-site-visit">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                Book Site Visit
+            </button>
+            <button type="button" class="btn btn-outline" data-open-modal="modal-brochure">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Get Brochure
+            </button>
+        </div>
+
+        <!-- Hero Search Filter Bar -->
+        <div class="hero-search-wrapper">
+            <form action="properties.html" method="GET" class="hero-search-form">
+                <div class="search-field">
+                    <label for="search-location">Location</label>
+                    <select name="location" id="search-location">
+                        <option value="">All Prime Locations</option>
+                        <option value="Jubilee Hills">Jubilee Hills</option>
+                        <option value="Banjara Hills">Banjara Hills</option>
+                        <option value="Hitec City">Hitec City / Financial Dist.</option>
+                        <option value="Gachibowli">Gachibowli Outer Ring</option>
+                        <option value="Moinabad">Moinabad Valley</option>
+                    </select>
+                </div>
+
+                <div class="search-field">
+                    <label for="search-category">Property Type</label>
+                    <select name="category" id="search-category">
+                        <option value="">All Categories</option>
+                        <option value="Apartment">Penthouses & Suites</option>
+                        <option value="Villa">Signature Villas</option>
+                        <option value="Commercial">Grade-A Commercial</option>
+                        <option value="Plot">Exclusive Plots</option>
+                    </select>
+                </div>
+
+                <div class="search-field">
+                    <label for="search-budget">Budget Tier</label>
+                    <select name="budget" id="search-budget">
+                        <option value="">Any Budget</option>
+                        <option value="100000000">Up to ₹10 Crore</option>
+                        <option value="250000000">Up to ₹25 Crore</option>
+                        <option value="500000000">Up to ₹50 Crore</option>
+                        <option value="1000000000">₹50 Crore & Above</option>
+                    </select>
+                </div>
+
+                <div>
+                    <button type="submit" class="btn btn-primary" style="padding: 12px 24px; width: 100%;">
+                        Search
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- ---------------- 2. Stats Row ---------------- -->
+<section class="stats-section">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Years of Heritage</div>
+                <span class="sample-badge">Sample Data</span>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">75+</div>
+                <div class="stat-label">Bespoke Projects</div>
+                <span class="sample-badge">Sample Data</span>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">₹350Cr+</div>
+                <div class="stat-label">Properties Transacted</div>
+                <span class="sample-badge">Sample Data</span>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">99.2%</div>
+                <div class="stat-label">Client Satisfaction</div>
+                <span class="sample-badge">Sample Data</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ---------------- 3. Featured Properties ---------------- -->
+<section class="section-padding" id="properties">
+    <div class="container">
+        <div style="text-align: center;">
+            <span class="section-tag">Curated Portfolio</span>
+            <h2 class="section-title">Signature Landmarks</h2>
+            <p class="section-subtitle">
+                Each acquisition in our portfolio represents irreplaceable location, architectural eminence, and uncompromising privacy.
+            </p>
+        </div>
+
+        <div class="properties-grid">
+            <!-- Property 1 -->
+            <article class="property-card">
+                <div class="property-image-box">
+                    <img src="assets/img/property-1.svg" alt="The Sovereign Penthouse" loading="lazy">
+                    <span class="property-badge">Apartment</span>
+                    <span class="property-status-badge status-available">Available</span>
+                </div>
+                <div class="property-body">
+                    <div class="property-location">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Jubilee Hills, Hyderabad
+                    </div>
+                    <h3 class="property-title">
+                        <a href="property.html?id=1">The Sovereign Penthouse [Sample]</a>
+                    </h3>
+                    <p class="property-description-preview">
+                        A magnificent double-height triplex penthouse offering 360-degree skyline vistas, wrap-around sky deck with heated infinity pool, and Calacatta marble.
+                    </p>
+                    <div class="property-specs-row">
+                        <div class="spec-item"><strong>5</strong> Beds</div>
+                        <div class="spec-item"><strong>6</strong> Baths</div>
+                        <div class="spec-item"><strong>6,800</strong> sq.ft</div>
+                    </div>
+                    <div class="property-footer">
+                        <div class="property-price">₹14.50 Cr</div>
+                        <a href="property.html?id=1" class="btn btn-outline btn-sm">View Estate</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Property 2 -->
+            <article class="property-card">
+                <div class="property-image-box">
+                    <img src="assets/img/property-2.svg" alt="The Elysian Garden Villa" loading="lazy">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-status-badge status-available">Available</span>
+                </div>
+                <div class="property-body">
+                    <div class="property-location">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Gachibowli Outer Ring, Hyderabad
+                    </div>
+                    <h3 class="property-title">
+                        <a href="property.html?id=2">The Elysian Garden Villa [Sample]</a>
+                    </h3>
+                    <p class="property-description-preview">
+                        Set across a private 1.2-acre manicured plot, combining Mediterranean stone facades with floor-to-ceiling acoustic glass walls and private reflecting ponds.
+                    </p>
+                    <div class="property-specs-row">
+                        <div class="spec-item"><strong>6</strong> Beds</div>
+                        <div class="spec-item"><strong>7</strong> Baths</div>
+                        <div class="spec-item"><strong>9,200</strong> sq.ft</div>
+                    </div>
+                    <div class="property-footer">
+                        <div class="property-price">₹22.00 Cr</div>
+                        <a href="property.html?id=2" class="btn btn-outline btn-sm">View Estate</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Property 3 -->
+            <article class="property-card">
+                <div class="property-image-box">
+                    <img src="assets/img/property-3.svg" alt="Prestige Crown Commercial Tower" loading="lazy">
+                    <span class="property-badge">Commercial</span>
+                    <span class="property-status-badge status-available">Available</span>
+                </div>
+                <div class="property-body">
+                    <div class="property-location">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Hitec City, Financial District
+                    </div>
+                    <h3 class="property-title">
+                        <a href="property.html?id=3">Prestige Crown Commercial Tower [Sample]</a>
+                    </h3>
+                    <p class="property-description-preview">
+                        LEED Platinum Grade A corporate headquarters featuring column-free floor plates, high-speed destination-controlled elevators, and HVAC air-purification.
+                    </p>
+                    <div class="property-specs-row">
+                        <div class="spec-item">Grade-A Corporate</div>
+                        <div class="spec-item"><strong>35,000</strong> sq.ft</div>
+                    </div>
+                    <div class="property-footer">
+                        <div class="property-price">₹48.00 Cr</div>
+                        <a href="property.html?id=3" class="btn btn-outline btn-sm">View Estate</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Property 4 -->
+            <article class="property-card">
+                <div class="property-image-box">
+                    <img src="assets/img/property-4.svg" alt="The Aurum Signature Residence" loading="lazy">
+                    <span class="property-badge">Apartment</span>
+                    <span class="property-status-badge status-available">Available</span>
+                </div>
+                <div class="property-body">
+                    <div class="property-location">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Banjara Hills, Hyderabad
+                    </div>
+                    <h3 class="property-title">
+                        <a href="property.html?id=4">The Aurum Signature Residence [Sample]</a>
+                    </h3>
+                    <p class="property-description-preview">
+                        Single-floor luxury apartment in a boutique 8-unit development with acoustic soundproofing, walk-in custom Italian wardrobes, and green valley views.
+                    </p>
+                    <div class="property-specs-row">
+                        <div class="spec-item"><strong>4</strong> Beds</div>
+                        <div class="spec-item"><strong>4</strong> Baths</div>
+                        <div class="spec-item"><strong>4,600</strong> sq.ft</div>
+                    </div>
+                    <div class="property-footer">
+                        <div class="property-price">₹9.80 Cr</div>
+                        <a href="property.html?id=4" class="btn btn-outline btn-sm">View Estate</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Property 5 -->
+            <article class="property-card">
+                <div class="property-image-box">
+                    <img src="assets/img/property-5.svg" alt="Serene Palms Estate" loading="lazy">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-status-badge status-upcoming">Upcoming</span>
+                </div>
+                <div class="property-body">
+                    <div class="property-location">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Moinabad Green Valley
+                    </div>
+                    <h3 class="property-title">
+                        <a href="property.html?id=5">Serene Palms Estate [Sample]</a>
+                    </h3>
+                    <p class="property-description-preview">
+                        An oasis of peace featuring an Olympic-grade private pool, manicured fruit orchards, independent clubhouse pavilion, and perimeter surveillance.
+                    </p>
+                    <div class="property-specs-row">
+                        <div class="spec-item"><strong>5</strong> Beds</div>
+                        <div class="spec-item"><strong>6</strong> Baths</div>
+                        <div class="spec-item"><strong>8,400</strong> sq.ft</div>
+                    </div>
+                    <div class="property-footer">
+                        <div class="property-price">₹18.50 Cr</div>
+                        <a href="property.html?id=5" class="btn btn-outline btn-sm">View Estate</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Property 6 -->
+            <article class="property-card">
+                <div class="property-image-box">
+                    <img src="assets/img/property-6.svg" alt="The Opus Pinnacle Suites" loading="lazy">
+                    <span class="property-badge">Commercial</span>
+                    <span class="property-status-badge status-sold">Sold</span>
+                </div>
+                <div class="property-body">
+                    <div class="property-location">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Madhapur Tech Corridor
+                    </div>
+                    <h3 class="property-title">
+                        <a href="property.html?id=6">The Opus Pinnacle Suites [Sample]</a>
+                    </h3>
+                    <p class="property-description-preview">
+                        Corporate headquarters with column-free layouts designed for global fintech hubs, private legal chambers, and multinational enterprises.
+                    </p>
+                    <div class="property-specs-row">
+                        <div class="spec-item">Corporate Hub</div>
+                        <div class="spec-item"><strong>24,000</strong> sq.ft</div>
+                    </div>
+                    <div class="property-footer">
+                        <div class="property-price">₹32.00 Cr</div>
+                        <a href="property.html?id=6" class="btn btn-outline btn-sm">View Estate</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="properties.html" class="btn btn-outline">
+                Explore Complete Portfolio &rarr;
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ---------------- 4. About Preview ---------------- -->
+<section class="section-padding" style="background: var(--bg-surface); border-top: 1px solid var(--border-subtle);" id="about">
+    <div class="container">
+        <div class="split-content">
+            <div class="luxury-image-frame">
+                <img src="assets/img/about-estate.svg" alt="Magaram Architectural Heritage" loading="lazy">
+            </div>
+
+            <div>
+                <span class="section-tag">Our Heritage</span>
+                <h2 style="font-size: 2.4rem; margin-bottom: 20px;">
+                    Where Legacy Meets Architectural Grandeur
+                </h2>
+                <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.8; margin-bottom: 24px;">
+                    At Magaram Real Estate, we bridge discerning patrons with timeless architectural masterworks. Our portfolio is curated exclusively for those who view real estate not simply as assets, but as legacies of distinction.
+                </p>
+                <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 32px;">
+                    From off-market private penthouses in Jubilee Hills to signature commercial headquarters along the Tech Corridor, our client relationships are anchored in total confidentiality and exacting standards.
+                </p>
+                <div style="display: flex; gap: 16px;">
+                    <a href="about.html" class="btn btn-primary">Our Story</a>
+                    <a href="contact.html" class="btn btn-outline">Consult Concierge</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ---------------- 5. Why Choose Us ---------------- -->
+<section class="section-padding">
+    <div class="container">
+        <div style="text-align: center;">
+            <span class="section-tag">The Magaram Standard</span>
+            <h2 class="section-title">Why Discerning Clients Choose Magaram</h2>
+            <p class="section-subtitle">
+                An advisory model structured around discretion, bespoke legal vetting, and unparalleled access.
+            </p>
+        </div>
+
+        <div class="feature-cards-grid">
+            <div class="feature-box">
+                <div class="feature-icon-wrapper">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                </div>
+                <h3 class="feature-title">Off-Market Exclusivity</h3>
+                <p class="feature-text">
+                    Over 40% of our premier estate transactions take place entirely off-market, guarding the privacy of buyers and sellers alike.
+                </p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon-wrapper">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                </div>
+                <h3 class="feature-title">Vetted Legal Clearances</h3>
+                <p class="feature-text">
+                    Every landmark is subjected to multi-tier title search, structural certification, and RERA compliance before presentation.
+                </p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon-wrapper">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <h3 class="feature-title">Turnkey Concierge</h3>
+                <p class="feature-text">
+                    From bespoke architectural tailoring to property administration and tax advisory, our private office oversees every step.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ---------------- 6. Amenities Showcase ---------------- -->
+<section class="section-padding" style="background: var(--bg-surface); border-top: 1px solid var(--border-subtle);" id="amenities">
+    <div class="container">
+        <div style="text-align: center;">
+            <span class="section-tag">Bespoke Living</span>
+            <h2 class="section-title">Curated Signature Amenities</h2>
+            <p class="section-subtitle">
+                Designed to satisfy the expectations of modern royalty.
+            </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;">
+            <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 28px; border-radius: 6px;">
+                <div style="color: var(--gold-bright); font-size: 1.4rem; margin-bottom: 12px;">&#10022;</div>
+                <h4 style="font-size: 1.15rem; margin-bottom: 8px;">Infinity Sky Pools</h4>
+                <p style="color: var(--text-muted); font-size: 0.88rem;">Temperature-regulated horizon pools with skyline panoramic vistas.</p>
+            </div>
+            <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 28px; border-radius: 6px;">
+                <div style="color: var(--gold-bright); font-size: 1.4rem; margin-bottom: 12px;">&#10022;</div>
+                <h4 style="font-size: 1.15rem; margin-bottom: 8px;">Private Biometric Elevators</h4>
+                <p style="color: var(--text-muted); font-size: 0.88rem;">Direct access straight into private penthouse vestibules.</p>
+            </div>
+            <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 28px; border-radius: 6px;">
+                <div style="color: var(--gold-bright); font-size: 1.4rem; margin-bottom: 12px;">&#10022;</div>
+                <h4 style="font-size: 1.15rem; margin-bottom: 8px;">Italian Calacatta Finishes</h4>
+                <p style="color: var(--text-muted); font-size: 0.88rem;">Bookmatched imported marble floors and artisanal millwork.</p>
+            </div>
+            <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 28px; border-radius: 6px;">
+                <div style="color: var(--gold-bright); font-size: 1.4rem; margin-bottom: 12px;">&#10022;</div>
+                <h4 style="font-size: 1.15rem; margin-bottom: 8px;">Smart Home Automation</h4>
+                <p style="color: var(--text-muted); font-size: 0.88rem;">Unified touch and voice control for climate, acoustics, and security.</p>
+            </div>
+            <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 28px; border-radius: 6px;">
+                <div style="color: var(--gold-bright); font-size: 1.4rem; margin-bottom: 12px;">&#10022;</div>
+                <h4 style="font-size: 1.15rem; margin-bottom: 8px;">24/7 Diplomatic Security</h4>
+                <p style="color: var(--text-muted); font-size: 0.88rem;">Multi-tier CCTV perimeter monitoring and discrete concierge.</p>
+            </div>
+            <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 28px; border-radius: 6px;">
+                <div style="color: var(--gold-bright); font-size: 1.4rem; margin-bottom: 12px;">&#10022;</div>
+                <h4 style="font-size: 1.15rem; margin-bottom: 8px;">Staff & Chauffeur Quarters</h4>
+                <p style="color: var(--text-muted); font-size: 0.88rem;">Independent private quarters with dedicated accessways.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ---------------- 7. Gallery with Lightbox ---------------- -->
+<section class="section-padding" id="gallery">
+    <div class="container">
+        <div style="text-align: center;">
+            <span class="section-tag">Visual Walkthrough</span>
+            <h2 class="section-title">Architectural Gallery</h2>
+            <p class="section-subtitle">
+                A glimpse inside our landmark residences, architectural facades, and sprawling grounds.
+            </p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item" data-title="Penthouse Sky Deck" data-full="assets/img/property-1.svg">
+                <img src="assets/img/property-1.svg" alt="Penthouse Sky Deck" loading="lazy">
+                <div class="gallery-overlay">
+                    <span style="color: var(--gold-bright); font-size: 1.6rem;">&oplus;</span>
+                    <div class="gallery-title">Penthouse Sky Deck</div>
+                    <span style="font-size: 0.75rem; color: var(--gold-primary); text-transform: uppercase;">Exterior</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-title="Contemporary Stone Villa" data-full="assets/img/property-2.svg">
+                <img src="assets/img/property-2.svg" alt="Contemporary Stone Villa" loading="lazy">
+                <div class="gallery-overlay">
+                    <span style="color: var(--gold-bright); font-size: 1.6rem;">&oplus;</span>
+                    <div class="gallery-title">Contemporary Stone Villa</div>
+                    <span style="font-size: 0.75rem; color: var(--gold-primary); text-transform: uppercase;">Architecture</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-title="Commercial Glass Spire" data-full="assets/img/property-3.svg">
+                <img src="assets/img/property-3.svg" alt="Commercial Glass Spire" loading="lazy">
+                <div class="gallery-overlay">
+                    <span style="color: var(--gold-bright); font-size: 1.6rem;">&oplus;</span>
+                    <div class="gallery-title">Commercial Glass Spire</div>
+                    <span style="font-size: 0.75rem; color: var(--gold-primary); text-transform: uppercase;">Commercial</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-title="Boutique Residence Atrium" data-full="assets/img/property-4.svg">
+                <img src="assets/img/property-4.svg" alt="Boutique Residence Atrium" loading="lazy">
+                <div class="gallery-overlay">
+                    <span style="color: var(--gold-bright); font-size: 1.6rem;">&oplus;</span>
+                    <div class="gallery-title">Boutique Residence Atrium</div>
+                    <span style="font-size: 0.75rem; color: var(--gold-primary); text-transform: uppercase;">Interior</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-title="Green Valley Grounds" data-full="assets/img/property-5.svg">
+                <img src="assets/img/property-5.svg" alt="Green Valley Grounds" loading="lazy">
+                <div class="gallery-overlay">
+                    <span style="color: var(--gold-bright); font-size: 1.6rem;">&oplus;</span>
+                    <div class="gallery-title">Green Valley Grounds</div>
+                    <span style="font-size: 0.75rem; color: var(--gold-primary); text-transform: uppercase;">Estate</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-title="Opus Executive Complex" data-full="assets/img/property-6.svg">
+                <img src="assets/img/property-6.svg" alt="Opus Executive Complex" loading="lazy">
+                <div class="gallery-overlay">
+                    <span style="color: var(--gold-bright); font-size: 1.6rem;">&oplus;</span>
+                    <div class="gallery-title">Opus Executive Complex</div>
+                    <span style="font-size: 0.75rem; color: var(--gold-primary); text-transform: uppercase;">Commercial</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ---------------- 8. Testimonials ---------------- -->
+<section class="section-padding" style="background: var(--bg-surface); border-top: 1px solid var(--border-subtle);" id="testimonials">
+    <div class="container">
+        <div style="text-align: center;">
+            <span class="section-tag">Client Reflections</span>
+            <h2 class="section-title">Voices of Distinction</h2>
+            <p class="section-subtitle">
+                What leaders of industry, collectors, and legacy families say about their experience with Magaram.
+            </p>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-quote">
+                    &ldquo;Magaram delivered an experience beyond what traditional real estate firms offer. The level of privacy, architectural insight, and seamless transaction for our Jubilee Hills villa was unmatched.&rdquo;
+                </p>
+                <div class="testimonial-author">Vikramaditya Rao</div>
+                <div class="testimonial-role">Founder, Apex Capital [Sample]</div>
+                <span class="sample-badge" style="margin-top: 10px;">Sample Testimonial</span>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-quote">
+                    &ldquo;From private viewings to closing paperwork, every single detail was handled with precision and dignity. Truly the gold standard of luxury real estate advisory.&rdquo;
+                </p>
+                <div class="testimonial-author">Dr. Aisha Merchant</div>
+                <div class="testimonial-role">Chief Neurosurgeon [Sample]</div>
+                <span class="sample-badge" style="margin-top: 10px;">Sample Testimonial</span>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-quote">
+                    &ldquo;Finding a property that accommodated our curated gallery and private grounds seemed impossible until Magaram brought us their off-market collection.&rdquo;
+                </p>
+                <div class="testimonial-author">Rajeshwari Devi</div>
+                <div class="testimonial-role">Industrialist &amp; Art Collector [Sample]</div>
+                <span class="sample-badge" style="margin-top: 10px;">Sample Testimonial</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ---------------- 9. Office Location & Contact ---------------- -->
+<section class="section-padding contact-section" id="contact">
+    <div class="container">
+        <div style="text-align: center;">
+            <span class="section-tag">Private Appointment</span>
+            <h2 class="section-title">Visit Our Executive Chambers</h2>
+            <p class="section-subtitle">
+                We invite you for an espresso or champagne tasting while we present our off-market portfolio.
+            </p>
+        </div>
+
+        <div class="contact-grid">
+            <!-- Office Details & Direct Form -->
+            <div class="contact-info-card">
+                <h3 style="font-size: 1.5rem; margin-bottom: 20px; color: var(--gold-bright);">
+                    Connect with Our Senior Partner
+                </h3>
+                
+                <form class="luxury-form ajax-enquiry-form" action="#" method="POST">
+                    <input type="text" name="website_url_hp" class="hp-field" tabindex="-1" autocomplete="off">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="home-contact-name">Name *</label>
+                            <input type="text" id="home-contact-name" name="name" class="form-control" placeholder="Your Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="home-contact-phone">Phone *</label>
+                            <input type="tel" id="home-contact-phone" name="phone" class="form-control" placeholder="+91 98765 00000" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="home-contact-email">Email Address *</label>
+                        <input type="email" id="home-contact-email" name="email" class="form-control" placeholder="your@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="home-contact-msg">Message / Requirements</label>
+                        <textarea id="home-contact-msg" name="message" class="form-control" rows="3" placeholder="Specify your desired location, property type, or specific questions..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="margin-top: 6px;">
+                        Request Confidential Consultation
+                    </button>
+                </form>
+
+                <div style="margin-top: 32px; border-top: 1px solid var(--border-subtle); padding-top: 24px;">
+                    <div class="info-item">
+                        <span class="info-icon">&#9906;</span>
+                        <div>
+                            <strong>Headquarters:</strong><br>
+                            <span style="color: var(--text-muted); font-size: 0.9rem;">Magaram Towers, Level 14, Prestige Boulevard, Jubilee Hills, Hyderabad</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">&#9742;</span>
+                        <div>
+                            <strong>Direct Concierge:</strong><br>
+                            <span style="color: var(--text-muted); font-size: 0.9rem;">+91 98765 43210</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Container -->
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.6669939527643!2d78.40698717594732!3d17.42777170163351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb96cd3d1f1f1f%3A0x8898124231234567!2sJubilee%20Hills%2C%20Hyderabad!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                    title="Magaram Real Estate Office Location" 
+                    loading="lazy" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Global Footer -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="brand-logo" style="margin-bottom: 18px;">
+                    <img src="assets/img/magaram-logo.svg" alt="Magaram Crest" width="36" height="36">
+                    <div class="brand-title">
+                        MAGARAM
+                        <span class="brand-sub">REAL ESTATE</span>
+                    </div>
+                </a>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px;">
+                    Curating architectural masterworks and signature estates for those who command distinction.
+                </p>
+                <div style="font-size: 0.8rem; color: var(--gold-primary);">
+                    Excellence &bull; Discretion &bull; Legacy
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Portfolio</h4>
+                <ul class="footer-links">
+                    <li><a href="properties.html?category=Apartment">Penthouses &amp; Luxury Suites</a></li>
+                    <li><a href="properties.html?category=Villa">Signature Garden Villas</a></li>
+                    <li><a href="properties.html?category=Commercial">Grade-A Commercial</a></li>
+                    <li><a href="properties.html?category=Plot">Private Land Parcels</a></li>
+                    <li><a href="properties.html?status=Upcoming">Upcoming Landmarks</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>The House</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Magaram</a></li>
+                    <li><a href="services.html">Bespoke Advisory</a></li>
+                    <li><a href="contact.html">Private Concierge</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Private Concierge</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 10px;">
+                    Magaram Towers, Level 14, Prestige Boulevard, Jubilee Hills, Hyderabad
+                </p>
+                <p style="margin-bottom: 6px;">
+                    <a href="tel:+919876543210" style="color: var(--gold-bright); font-weight: 600;">
+                        +91 98765 43210
+                    </a>
+                </p>
+                <p>
+                    <a href="mailto:contact@magaramrealestate.com" style="color: var(--text-muted); font-size: 0.88rem;">
+                        contact@magaramrealestate.com
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                &copy; 2026 Magaram Real Estate. All Rights Reserved.
+            </div>
+            <div style="display: flex; gap: 20px;">
+                <span style="color: var(--text-muted); font-size: 0.8rem;">Royal Black &amp; Antique Gold Collection</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ---------------- Book Site Visit Modal ---------------- -->
+<div class="modal-backdrop" id="modal-site-visit" role="dialog" aria-modal="true" aria-labelledby="modal-visit-title">
+    <div class="modal-dialog">
+        <button type="button" class="modal-close" aria-label="Close dialog">&times;</button>
+        <div style="text-align: center; margin-bottom: 24px;">
+            <span class="section-tag">Private Appointment</span>
+            <h3 id="modal-visit-title" style="font-size: 1.8rem;">Book a Site Visit</h3>
+            <p class="modal-property-name" style="display: none; color: var(--gold-bright); font-size: 0.95rem; margin-top: 6px;"></p>
+        </div>
+
+        <form class="luxury-form ajax-enquiry-form" action="#" method="POST">
+            <input type="text" name="website_url_hp" class="hp-field" tabindex="-1" autocomplete="off">
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="visit-name">Full Name *</label>
+                    <input type="text" id="visit-name" name="name" class="form-control" placeholder="e.g. Vikramaditya Rao" required>
+                </div>
+                <div class="form-group">
+                    <label for="visit-phone">Direct Phone *</label>
+                    <input type="tel" id="visit-phone" name="phone" class="form-control" placeholder="+91 98765 00000" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="visit-email">Email Address *</label>
+                    <input type="email" id="visit-email" name="email" class="form-control" placeholder="name@domain.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="visit-date">Preferred Date</label>
+                    <input type="date" id="visit-date" name="preferred_date" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="visit-notes">Bespoke Requirements / Notes</label>
+                <textarea id="visit-notes" name="message" class="form-control" rows="3" placeholder="Tell us your preferences (e.g., private elevator, skyline view, executive timing)"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
+                Confirm Private Viewing Request
+            </button>
+        </form>
+    </div>
+</div>
+
+<!-- ---------------- Get Brochure Modal ---------------- -->
+<div class="modal-backdrop" id="modal-brochure" role="dialog" aria-modal="true" aria-labelledby="modal-brochure-title">
+    <div class="modal-dialog">
+        <button type="button" class="modal-close" aria-label="Close dialog">&times;</button>
+        <div style="text-align: center; margin-bottom: 24px;">
+            <span class="section-tag">Confidential Portfolio</span>
+            <h3 id="modal-brochure-title" style="font-size: 1.8rem;">Download Brochure</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 6px;">
+                Receive the complete architectural prospectus with high-resolution floor plans and specifications.
+            </p>
+        </div>
+
+        <form class="luxury-form ajax-enquiry-form" action="#" method="POST">
+            <input type="text" name="website_url_hp" class="hp-field" tabindex="-1" autocomplete="off">
+
+            <div class="form-group">
+                <label for="brochure-name">Full Name *</label>
+                <input type="text" id="brochure-name" name="name" class="form-control" placeholder="e.g. Ananya Singhania" required>
+            </div>
+
+            <div class="form-group">
+                <label for="brochure-phone">Phone Number *</label>
+                <input type="tel" id="brochure-phone" name="phone" class="form-control" placeholder="+91 98765 00000" required>
+            </div>
+
+            <div class="form-group">
+                <label for="brochure-email">Email Address (To Receive PDF) *</label>
+                <input type="email" id="brochure-email" name="email" class="form-control" placeholder="client@company.com" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
+                Access Architectural Brochure
+            </button>
+        </form>
+    </div>
+</div>
+
+<!-- JavaScript Core -->
+<script src="assets/js/main.js"></script>
+<script src="assets/js/sparkle.js"></script>
+</body>
+</html>

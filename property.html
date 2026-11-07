@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Property Detail | Magaram Real Estate</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site-header" id="main-header">
+    <div class="container nav-container">
+        <a href="index.html" class="brand-logo" aria-label="Magaram Real Estate Home">
+            <img src="assets/img/magaram-logo.svg" alt="Magaram Crest" width="38" height="38">
+            <div class="brand-title">MAGARAM <span class="brand-sub">REAL ESTATE</span></div>
+        </a>
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="properties.html" class="nav-link active">Properties</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        <div class="nav-actions">
+            <a href="tel:+919876543210" class="nav-link phone-link" style="font-size: 0.85rem; color: var(--gold-bright);">+91 98765 43210</a>
+            <button type="button" class="btn btn-primary btn-sm" data-open-modal="modal-site-visit">Book Site Visit</button>
+            <button class="menu-toggle" aria-label="Toggle Navigation">&#9776;</button>
+        </div>
+    </div>
+</header>
+
+<div style="padding-top: 120px; background: var(--bg-surface); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container" style="padding-top: 30px; padding-bottom: 30px;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px;">
+            <div>
+                <div class="location-pill" style="margin-bottom: 12px;">
+                    <span class="pill-dot"></span>
+                    <span id="p-loc">Jubilee Hills, Hyderabad</span>
+                </div>
+                <h1 style="font-size: 2.8rem; margin-bottom: 8px;" id="p-title">The Sovereign Penthouse [Sample]</h1>
+                <div style="color: var(--text-muted); font-size: 0.95rem;">
+                    Category: <strong style="color: var(--gold-bright);" id="p-cat">Apartment</strong> &bull; Status: <span class="property-status-badge status-available" id="p-status">Available</span>
+                    <span class="sample-badge">Sample Data</span>
+                </div>
+            </div>
+
+            <div style="text-align: right;">
+                <div style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase;">Valuation</div>
+                <div style="font-family: var(--font-heading); font-size: 2.5rem; color: var(--gold-bright); font-weight: 700;" id="p-price">
+                    ₹14.50 Cr
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container section-padding">
+    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px;">
+        <!-- Left: Image & Description -->
+        <div>
+            <div style="border-radius: 8px; overflow: hidden; border: 1px solid var(--border-gold); aspect-ratio: 16/10; margin-bottom: 30px; box-shadow: 0 15px 40px rgba(0,0,0,0.8);">
+                <img id="p-img" src="assets/img/property-1.svg" alt="Estate Preview" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 24px; border-radius: 8px; margin-bottom: 40px; text-align: center;">
+                <div>
+                    <div style="font-size: 0.75rem; color: var(--gold-bright); text-transform: uppercase;">Super Area</div>
+                    <div style="font-size: 1.4rem; font-weight: 700;" id="p-area">6,800 <span style="font-size: 0.85rem; font-weight: 400;">sq.ft</span></div>
+                </div>
+                <div>
+                    <div style="font-size: 0.75rem; color: var(--gold-bright); text-transform: uppercase;">Bedrooms</div>
+                    <div style="font-size: 1.4rem; font-weight: 700;" id="p-beds">5</div>
+                </div>
+                <div>
+                    <div style="font-size: 0.75rem; color: var(--gold-bright); text-transform: uppercase;">Bathrooms</div>
+                    <div style="font-size: 1.4rem; font-weight: 700;" id="p-baths">6</div>
+                </div>
+                <div>
+                    <div style="font-size: 0.75rem; color: var(--gold-bright); text-transform: uppercase;">Availability</div>
+                    <div style="font-size: 1.4rem; font-weight: 700; color: #4ade80;">Available</div>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 48px;">
+                <span class="section-tag">Architectural Blueprint</span>
+                <h2 style="font-size: 2rem; margin-bottom: 20px;">The Residence Narrative</h2>
+                <div style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.8;" id="p-desc">
+                    A magnificent double-height triplex penthouse offering 360-degree skyline vistas. Features private elevator access, an 800 sq.ft wrap-around sky deck with heated infinity plunge pool, imported Calacatta marble, and custom smart automation tailored for royalty.
+                </div>
+            </div>
+
+            <div>
+                <span class="section-tag">Bespoke Inclusions</span>
+                <h2 style="font-size: 2rem; margin-bottom: 24px;">Signature Amenities</h2>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;">
+                    <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 16px 20px; border-radius: 6px; display: flex; align-items: center; gap: 12px;">
+                        <span style="color: var(--gold-bright); font-size: 1.2rem;">&#10022;</span>
+                        <span>Private Elevator</span>
+                    </div>
+                    <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 16px 20px; border-radius: 6px; display: flex; align-items: center; gap: 12px;">
+                        <span style="color: var(--gold-bright); font-size: 1.2rem;">&#10022;</span>
+                        <span>Infinity Plunge Pool</span>
+                    </div>
+                    <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 16px 20px; border-radius: 6px; display: flex; align-items: center; gap: 12px;">
+                        <span style="color: var(--gold-bright); font-size: 1.2rem;">&#10022;</span>
+                        <span>Smart Automation</span>
+                    </div>
+                    <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 16px 20px; border-radius: 6px; display: flex; align-items: center; gap: 12px;">
+                        <span style="color: var(--gold-bright); font-size: 1.2rem;">&#10022;</span>
+                        <span>Italian Marble Flooring</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right: Private Viewing Form -->
+        <div>
+            <div style="position: sticky; top: 110px; background: var(--bg-card); border: 1px solid var(--border-gold); border-radius: 8px; padding: 32px; box-shadow: 0 15px 40px rgba(0,0,0,0.7);">
+                <span class="section-tag">Direct Representation</span>
+                <h3 style="font-size: 1.5rem; margin-bottom: 8px;">Private Viewing Request</h3>
+                <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 24px;">Arranged discreetly with our Senior Director.</p>
+
+                <form class="luxury-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Viewing request noted! Our executive director will connect with you.');">
+                    <div class="form-group">
+                        <label for="p-name">Full Name *</label>
+                        <input type="text" id="p-name" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="p-phone">Phone Number *</label>
+                        <input type="tel" id="p-phone" class="form-control" placeholder="+91 98765 00000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="p-email">Email Address *</label>
+                        <input type="email" id="p-email" class="form-control" placeholder="client@domain.com" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 6px;">
+                        Book Site Visit
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="site-footer">
+    <div class="container text-center" style="padding-bottom: 30px;">
+        &copy; 2026 Magaram Real Estate. All Rights Reserved.
+    </div>
+</footer>
+
+<script>
+// Data dictionary for static client-side lookup
+const propData = {
+    1: { title: 'The Sovereign Penthouse [Sample]', cat: 'Apartment', loc: 'Jubilee Hills, Hyderabad', price: '₹14.50 Cr', area: '6,800', beds: '5', baths: '6', img: 'assets/img/property-1.svg', desc: 'A magnificent double-height triplex penthouse offering 360-degree skyline vistas. Features private elevator access, an 800 sq.ft wrap-around sky deck with heated infinity plunge pool, imported Calacatta marble, and custom smart automation tailored for royalty.' },
+    2: { title: 'The Elysian Garden Villa [Sample]', cat: 'Villa', loc: 'Gachibowli Outer Ring, Hyderabad', price: '₹22.00 Cr', area: '9,200', beds: '6', baths: '7', img: 'assets/img/property-2.svg', desc: 'Set across a private 1.2-acre manicured plot, this contemporary masterpiece combines Mediterranean stone facades with floor-to-ceiling acoustic glass walls, private temperature-controlled wine cellar, serene reflecting ponds, and staff quarters.' },
+    3: { title: 'Prestige Crown Commercial Tower [Sample]', cat: 'Commercial', loc: 'Hitec City, Financial District', price: '₹48.00 Cr', area: '35,000', beds: 'N/A', baths: '12', img: 'assets/img/property-3.svg', desc: 'LEED Platinum-certified Grade A commercial headquarters. Designed for global enterprise operations with column-free floor plates, high-speed destination-controlled elevators, and state-of-the-art HVAC air-purification.' },
+    4: { title: 'The Aurum Signature Residence [Sample]', cat: 'Apartment', loc: 'Banjara Hills, Hyderabad', price: '₹9.80 Cr', area: '4,600', beds: '4', baths: '4', img: 'assets/img/property-4.svg', desc: 'An ultra-exclusive single-floor apartment in a boutique 8-unit development. Boasts soundproofed acoustic suites, private master retreat with walk-in custom Italian wardrobes, and panoramic green valley views.' },
+    5: { title: 'Serene Palms Estate [Sample]', cat: 'Villa', loc: 'Moinabad Green Valley', price: '₹18.50 Cr', area: '8,400', beds: '5', baths: '6', img: 'assets/img/property-5.svg', desc: 'An oasis of peace featuring an Olympic-grade private pool, manicured fruit orchards, independent clubhouse pavilion, and state-of-the-art perimeter security.' },
+    6: { title: 'The Opus Pinnacle Suites [Sample]', cat: 'Commercial', loc: 'Madhapur Tech Corridor', price: '₹32.00 Cr', area: '24,000', beds: 'N/A', baths: '8', img: 'assets/img/property-6.svg', desc: 'Premium corporate floor plates ready for luxury brand flagships, boutique legal chambers, or international fintech hubs.' }
+};
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get('id') || '1';
+if (propData[id]) {
+    const p = propData[id];
+    document.getElementById('p-title').textContent = p.title;
+    document.getElementById('p-cat').textContent = p.cat;
+    document.getElementById('p-loc').textContent = p.loc;
+    document.getElementById('p-price').textContent = p.price;
+    document.getElementById('p-area').innerHTML = p.area + ' <span style="font-size: 0.85rem; font-weight: 400;">sq.ft</span>';
+    document.getElementById('p-beds').textContent = p.beds;
+    document.getElementById('p-baths').textContent = p.baths;
+    document.getElementById('p-desc').textContent = p.desc;
+    document.getElementById('p-img').src = p.img;
+}
+</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

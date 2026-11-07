@@ -19,3 +19,7 @@ uploads/properties/*
 uploads/brochures/*
 !uploads/brochures/.gitkeep
 uploads/.htaccess
+
+# Internal admin repo builder
+.admin_repo/
+

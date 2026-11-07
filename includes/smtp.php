@@ -175,3 +175,4 @@ class LuxuryMailer {
         return in_array($code, $validCodes, true);
     }
 }
+

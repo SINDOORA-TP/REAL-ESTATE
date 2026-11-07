@@ -6,6 +6,7 @@ require_once __DIR__ . '/includes/config.php';
 require_once __DIR__ . '/includes/functions.php';
 
 $settings = get_all_settings();
+$csrfToken = generate_csrf_token();
 $db = get_db();
 
 // Fetch Featured Properties
@@ -94,7 +95,7 @@ require_once __DIR__ . '/includes/header.php';
         <!-- Location Pill -->
         <div class="location-pill">
             <span class="pill-dot"></span>
-            JUBILEE HILLS, HYDERABAD
+            RACE COURSE, COIMBATORE
         </div>
 
         <!-- Two-Tone Headline -->
@@ -133,14 +134,16 @@ require_once __DIR__ . '/includes/header.php';
         <div class="hero-search-wrapper">
             <form action="<?= BASE_URL; ?>/properties.php" method="GET" class="hero-search-form">
                 <div class="search-field">
-                    <label for="search-location">Location</label>
+                    <label for="search-location">Coimbatore Location</label>
                     <select name="location" id="search-location">
                         <option value="">All Prime Locations</option>
-                        <option value="Jubilee Hills">Jubilee Hills</option>
-                        <option value="Banjara Hills">Banjara Hills</option>
-                        <option value="Hitec City">Hitec City / Financial Dist.</option>
-                        <option value="Gachibowli">Gachibowli Outer Ring</option>
-                        <option value="Moinabad">Moinabad Valley</option>
+                        <option value="Race Course">Race Course</option>
+                        <option value="R.S. Puram">R.S. Puram</option>
+                        <option value="Avinashi Road">Avinashi Road / Peelamedu</option>
+                        <option value="Saibaba Colony">Saibaba Colony</option>
+                        <option value="Vadavalli">Vadavalli Foothills</option>
+                        <option value="Saravanampatti">Saravanampatti IT Corridor</option>
+                        <option value="Siruvani">Siruvani Foothills</option>
                     </select>
                 </div>
 

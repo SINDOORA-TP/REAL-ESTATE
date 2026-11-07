@@ -120,7 +120,7 @@ require_once __DIR__ . '/includes/header.php';
         <form method="GET" action="properties.php" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) auto; gap: 16px; align-items: flex-end;">
             <div class="search-field">
                 <label for="f-kw">Search Keyword</label>
-                <input type="text" id="f-kw" name="q" value="<?= e($keyword); ?>" placeholder="e.g. Jubilee, Penthouse">
+                <input type="text" id="f-kw" name="q" value="<?= e($keyword); ?>" placeholder="e.g. Race Course, Penthouse">
             </div>
 
             <div class="search-field">

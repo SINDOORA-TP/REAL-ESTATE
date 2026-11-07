@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Exclusive Properties | Magaram Real Estate</title>
+    <title>Exclusive Coimbatore Properties | Magaram Real Estate</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -21,7 +21,7 @@
             <a href="contact.html" class="nav-link">Contact</a>
         </nav>
         <div class="nav-actions">
-            <a href="tel:+919876543210" class="nav-link phone-link" style="font-size: 0.85rem; color: var(--gold-bright);">+91 98765 43210</a>
+            <a href="tel:+919843012345" class="nav-link phone-link live-site-phone" style="font-size: 0.85rem; color: var(--gold-bright);">+91 98430 12345</a>
             <button type="button" class="btn btn-primary btn-sm" data-open-modal="modal-site-visit">Book Site Visit</button>
             <button class="menu-toggle" aria-label="Toggle Navigation">&#9776;</button>
         </div>
@@ -30,10 +30,10 @@
 
 <div style="padding-top: 130px; background: var(--bg-surface); padding-bottom: 40px; border-bottom: 1px solid var(--border-subtle);">
     <div class="container text-center">
-        <span class="section-tag">Portfolio Catalog</span>
-        <h1 style="font-size: 3rem; margin-bottom: 12px;">Curated Estates</h1>
+        <span class="section-tag">Coimbatore Portfolio</span>
+        <h1 style="font-size: 3rem; margin-bottom: 12px;">Curated Coimbatore Estates</h1>
         <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">
-            Explore exceptional residences and commercial assets currently available for private acquisition.
+            Explore exceptional residences, villas, and commercial assets across Race Course, R.S. Puram, Avinashi Road, and Western Ghats foothills.
         </p>
     </div>
 </div>
@@ -41,10 +41,10 @@
 <div class="container section-padding">
     <!-- Filter Bar -->
     <div style="background: var(--bg-card); border: 1px solid var(--border-gold); border-radius: 8px; padding: 24px; margin-bottom: 48px;">
-        <form id="filter-form" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) auto; gap: 16px; align-items: flex-end;">
+        <form id="filter-form" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) auto; gap: 16px; align-items: flex-end;" onsubmit="event.preventDefault(); filterCards();">
             <div class="search-field">
-                <label for="f-kw">Search Keyword</label>
-                <input type="text" id="f-kw" placeholder="e.g. Jubilee, Penthouse">
+                <label for="f-kw">Search Keyword / Coimbatore Locality</label>
+                <input type="text" id="f-kw" placeholder="e.g. Race Course, Penthouse, Villa">
             </div>
 
             <div class="search-field">
@@ -52,8 +52,9 @@
                 <select id="f-cat">
                     <option value="">All Categories</option>
                     <option value="Apartment">Penthouses &amp; Apartments</option>
-                    <option value="Villa">Villas</option>
-                    <option value="Commercial">Commercial</option>
+                    <option value="Villa">Signature Villas</option>
+                    <option value="Commercial">Commercial Assets</option>
+                    <option value="Plot">Exclusive Plots</option>
                 </select>
             </div>
 
@@ -71,9 +72,9 @@
                 <label for="f-budget">Budget</label>
                 <select id="f-budget">
                     <option value="">Any Budget</option>
-                    <option value="150000000">Up to ₹15 Crore</option>
-                    <option value="300000000">Up to ₹30 Crore</option>
-                    <option value="500000000">Up to ₹50 Crore</option>
+                    <option value="100000000">Up to ₹10 Crore</option>
+                    <option value="200000000">Up to ₹20 Crore</option>
+                    <option value="400000000">Up to ₹40 Crore</option>
                 </select>
             </div>
 
@@ -85,195 +86,179 @@
 
     <!-- Properties Grid -->
     <div class="properties-grid" id="properties-container">
-        <!-- 1 -->
-        <article class="property-card" data-cat="Apartment" data-status="Available" data-price="145000000" data-kw="sovereign penthouse jubilee hills">
-            <div class="property-image-box">
-                <img src="assets/img/property-1.svg" alt="The Sovereign Penthouse">
-                <span class="property-badge">Apartment</span>
-                <span class="property-status-badge status-available">Available</span>
-            </div>
-            <div class="property-body">
-                <div class="property-location">&#9906; Jubilee Hills, Hyderabad</div>
-                <h3 class="property-title"><a href="property.html?id=1">The Sovereign Penthouse [Sample]</a></h3>
-                <p class="property-description-preview">Triplex penthouse with 360-degree vistas, private plunge pool, and Calacatta marble.</p>
-                <div class="property-specs-row">
-                    <div class="spec-item"><strong>5</strong> Beds</div>
-                    <div class="spec-item"><strong>6</strong> Baths</div>
-                    <div class="spec-item"><strong>6,800</strong> sq.ft</div>
-                </div>
-                <div class="property-footer">
-                    <div class="property-price">₹14.50 Cr</div>
-                    <a href="property.html?id=1" class="btn btn-outline btn-sm">View Estate</a>
-                </div>
-            </div>
-        </article>
-
-        <!-- 2 -->
-        <article class="property-card" data-cat="Villa" data-status="Available" data-price="220000000" data-kw="elysian garden villa gachibowli">
-            <div class="property-image-box">
-                <img src="assets/img/property-2.svg" alt="The Elysian Garden Villa">
-                <span class="property-badge">Villa</span>
-                <span class="property-status-badge status-available">Available</span>
-            </div>
-            <div class="property-body">
-                <div class="property-location">&#9906; Gachibowli Outer Ring, Hyderabad</div>
-                <h3 class="property-title"><a href="property.html?id=2">The Elysian Garden Villa [Sample]</a></h3>
-                <p class="property-description-preview">Private 1.2-acre manicured plot with acoustic glass walls and serene reflecting ponds.</p>
-                <div class="property-specs-row">
-                    <div class="spec-item"><strong>6</strong> Beds</div>
-                    <div class="spec-item"><strong>7</strong> Baths</div>
-                    <div class="spec-item"><strong>9,200</strong> sq.ft</div>
-                </div>
-                <div class="property-footer">
-                    <div class="property-price">₹22.00 Cr</div>
-                    <a href="property.html?id=2" class="btn btn-outline btn-sm">View Estate</a>
-                </div>
-            </div>
-        </article>
-
-        <!-- 3 -->
-        <article class="property-card" data-cat="Commercial" data-status="Available" data-price="480000000" data-kw="prestige crown commercial hitec city">
-            <div class="property-image-box">
-                <img src="assets/img/property-3.svg" alt="Prestige Crown Commercial Tower">
-                <span class="property-badge">Commercial</span>
-                <span class="property-status-badge status-available">Available</span>
-            </div>
-            <div class="property-body">
-                <div class="property-location">&#9906; Hitec City, Financial District</div>
-                <h3 class="property-title"><a href="property.html?id=3">Prestige Crown Commercial Tower [Sample]</a></h3>
-                <p class="property-description-preview">LEED Platinum Grade A corporate headquarters with column-free floor plates.</p>
-                <div class="property-specs-row">
-                    <div class="spec-item">Grade-A Corporate</div>
-                    <div class="spec-item"><strong>35,000</strong> sq.ft</div>
-                </div>
-                <div class="property-footer">
-                    <div class="property-price">₹48.00 Cr</div>
-                    <a href="property.html?id=3" class="btn btn-outline btn-sm">View Estate</a>
-                </div>
-            </div>
-        </article>
-
-        <!-- 4 -->
-        <article class="property-card" data-cat="Apartment" data-status="Available" data-price="98000000" data-kw="aurum signature residence banjara hills">
-            <div class="property-image-box">
-                <img src="assets/img/property-4.svg" alt="The Aurum Signature Residence">
-                <span class="property-badge">Apartment</span>
-                <span class="property-status-badge status-available">Available</span>
-            </div>
-            <div class="property-body">
-                <div class="property-location">&#9906; Banjara Hills, Hyderabad</div>
-                <h3 class="property-title"><a href="property.html?id=4">The Aurum Signature Residence [Sample]</a></h3>
-                <p class="property-description-preview">Ultra-exclusive single-floor apartment in a boutique 8-unit development.</p>
-                <div class="property-specs-row">
-                    <div class="spec-item"><strong>4</strong> Beds</div>
-                    <div class="spec-item"><strong>4</strong> Baths</div>
-                    <div class="spec-item"><strong>4,600</strong> sq.ft</div>
-                </div>
-                <div class="property-footer">
-                    <div class="property-price">₹9.80 Cr</div>
-                    <a href="property.html?id=4" class="btn btn-outline btn-sm">View Estate</a>
-                </div>
-            </div>
-        </article>
-
-        <!-- 5 -->
-        <article class="property-card" data-cat="Villa" data-status="Upcoming" data-price="185000000" data-kw="serene palms estate moinabad">
-            <div class="property-image-box">
-                <img src="assets/img/property-5.svg" alt="Serene Palms Estate">
-                <span class="property-badge">Villa</span>
-                <span class="property-status-badge status-upcoming">Upcoming</span>
-            </div>
-            <div class="property-body">
-                <div class="property-location">&#9906; Moinabad Green Valley</div>
-                <h3 class="property-title"><a href="property.html?id=5">Serene Palms Estate [Sample]</a></h3>
-                <p class="property-description-preview">Olympic-grade private pool, manicured fruit orchards, and independent pavilion.</p>
-                <div class="property-specs-row">
-                    <div class="spec-item"><strong>5</strong> Beds</div>
-                    <div class="spec-item"><strong>6</strong> Baths</div>
-                    <div class="spec-item"><strong>8,400</strong> sq.ft</div>
-                </div>
-                <div class="property-footer">
-                    <div class="property-price">₹18.50 Cr</div>
-                    <a href="property.html?id=5" class="btn btn-outline btn-sm">View Estate</a>
-                </div>
-            </div>
-        </article>
-
-        <!-- 6 -->
-        <article class="property-card" data-cat="Commercial" data-status="Sold" data-price="320000000" data-kw="opus pinnacle suites madhapur">
-            <div class="property-image-box">
-                <img src="assets/img/property-6.svg" alt="The Opus Pinnacle Suites">
-                <span class="property-badge">Commercial</span>
-                <span class="property-status-badge status-sold">Sold</span>
-            </div>
-            <div class="property-body">
-                <div class="property-location">&#9906; Madhapur Tech Corridor</div>
-                <h3 class="property-title"><a href="property.html?id=6">The Opus Pinnacle Suites [Sample]</a></h3>
-                <p class="property-description-preview">Corporate floor plates for luxury brand flagships and international fintech hubs.</p>
-                <div class="property-specs-row">
-                    <div class="spec-item">Corporate Hub</div>
-                    <div class="spec-item"><strong>24,000</strong> sq.ft</div>
-                </div>
-                <div class="property-footer">
-                    <div class="property-price">₹32.00 Cr</div>
-                    <a href="property.html?id=6" class="btn btn-outline btn-sm">View Estate</a>
-                </div>
-            </div>
-        </article>
+        <!-- Dynamically populated from PropertyStore -->
     </div>
 </div>
 
 <footer class="site-footer">
     <div class="container text-center" style="padding-bottom: 30px;">
-        &copy; 2026 Magaram Real Estate. All Rights Reserved.
+        &copy; 2026 Magaram Real Estate. All Rights Reserved. &bull; Race Course Road, Coimbatore
     </div>
 </footer>
 
+<!-- Book Site Visit Modal -->
+<div class="modal-backdrop" id="modal-site-visit" role="dialog" aria-modal="true" aria-labelledby="modal-visit-title">
+    <div class="modal-dialog">
+        <button type="button" class="modal-close" aria-label="Close dialog">&times;</button>
+        <div style="text-align: center; margin-bottom: 24px;">
+            <span class="section-tag">Private Appointment</span>
+            <h3 id="modal-visit-title" style="font-size: 1.8rem;">Book a Site Visit</h3>
+            <p class="modal-property-name" style="display: none; color: var(--gold-bright); font-size: 0.95rem; margin-top: 6px;"></p>
+        </div>
+
+        <form class="luxury-form ajax-enquiry-form" action="api/enquiry.php" method="POST">
+            <input type="hidden" name="type" value="Site Visit">
+            <input type="text" name="website_url_hp" class="hp-field" tabindex="-1" autocomplete="off">
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="visit-name">Full Name *</label>
+                    <input type="text" id="visit-name" name="name" class="form-control" placeholder="e.g. Vikramaditya Rao" required>
+                </div>
+                <div class="form-group">
+                    <label for="visit-phone">Direct Phone *</label>
+                    <input type="tel" id="visit-phone" name="phone" class="form-control" placeholder="+91 98430 00000" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="visit-email">Email Address *</label>
+                    <input type="email" id="visit-email" name="email" class="form-control" placeholder="name@domain.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="visit-date">Preferred Date</label>
+                    <input type="date" id="visit-date" name="preferred_date" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="visit-notes">Bespoke Requirements / Notes</label>
+                <textarea id="visit-notes" name="message" class="form-control" rows="3" placeholder="Tell us your preferences..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
+                Confirm Private Viewing Request
+            </button>
+        </form>
+    </div>
+</div>
+
+<!-- Load Data Store & Main Scripts -->
+<script src="assets/js/properties-store.js"></script>
+<script src="assets/js/main.js"></script>
+
 <script>
-// Client-side filtering for static GitHub Pages hosting
-const kwInput = document.getElementById('f-kw');
-const catSelect = document.getElementById('f-cat');
-const statSelect = document.getElementById('f-status');
-const budSelect = document.getElementById('f-budget');
-const resetBtn = document.getElementById('btn-reset');
-const cards = document.querySelectorAll('.property-card');
+// Dynamic Catalog Renderer & Filter
+function renderCatalog() {
+    if (typeof PropertyStore === 'undefined') return;
 
-function filterCards() {
-    const kw = kwInput.value.toLowerCase().trim();
-    const cat = catSelect.value;
-    const stat = statSelect.value;
-    const bud = parseFloat(budSelect.value) || 0;
+    const list = PropertyStore.getAll();
+    const container = document.getElementById('properties-container');
+    if (!container) return;
 
-    cards.forEach(card => {
-        const cKw = card.getAttribute('data-kw') || '';
-        const cCat = card.getAttribute('data-cat') || '';
-        const cStat = card.getAttribute('data-status') || '';
-        const cPrice = parseFloat(card.getAttribute('data-price')) || 0;
+    const kw = (document.getElementById('f-kw').value || '').toLowerCase().trim();
+    const cat = document.getElementById('f-cat').value;
+    const stat = document.getElementById('f-status').value;
+    const bud = parseFloat(document.getElementById('f-budget').value) || 0;
 
-        let match = true;
-        if (kw && !cKw.includes(kw)) match = false;
-        if (cat && cCat !== cat) match = false;
-        if (stat && cStat !== stat) match = false;
-        if (bud > 0 && cPrice > bud) match = false;
-
-        card.style.display = match ? 'flex' : 'none';
+    const filtered = list.filter(p => {
+        const textTarget = (p.title + ' ' + p.location + ' ' + (p.description || '')).toLowerCase();
+        if (kw && !textTarget.includes(kw)) return false;
+        if (cat && p.category !== cat) return false;
+        if (stat && p.status !== stat) return false;
+        if (bud > 0 && Number(p.price) > bud) return false;
+        return true;
     });
+
+    if (filtered.length === 0) {
+        container.innerHTML = `
+            <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 8px;">
+                <h3 style="color: var(--text-cream); margin-bottom: 8px;">No Matching Properties Found</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Try adjusting your filter criteria or reset to view all Coimbatore properties.</p>
+                <button type="button" class="btn btn-primary btn-sm" onclick="resetFilters()" style="margin-top: 14px;">Reset All Filters</button>
+            </div>
+        `;
+        return;
+    }
+
+    container.innerHTML = filtered.map(p => {
+        const statusClass = p.status === 'Available' ? 'status-available' : (p.status === 'Upcoming' ? 'status-upcoming' : 'status-sold');
+        const sampleTag = p.is_sample ? '<span class="sample-badge">Sample Data</span>' : '';
+        
+        return `
+            <article class="property-card" data-cat="${p.category}" data-status="${p.status}">
+                <div class="property-image-box">
+                    <img src="${p.cover_image || 'assets/img/property-1.svg'}" alt="${p.title}" loading="lazy">
+                    <span class="property-badge">${p.category}</span>
+                    <span class="property-status-badge ${statusClass}">${p.status}</span>
+                </div>
+                <div class="property-body">
+                    <div class="property-location">&#9906; ${p.location}</div>
+                    <h3 class="property-title">
+                        <a href="property.html?id=${p.id}">${p.title}</a> ${sampleTag}
+                    </h3>
+                    <p class="property-description-preview">${p.description || ''}</p>
+                    <div class="property-specs-row">
+                        ${p.bedrooms ? `<div class="spec-item"><strong>${p.bedrooms}</strong> Beds</div>` : ''}
+                        ${p.bathrooms ? `<div class="spec-item"><strong>${p.bathrooms}</strong> Baths</div>` : ''}
+                        ${p.area_sqft ? `<div class="spec-item"><strong>${p.area_sqft.toLocaleString()}</strong> sq.ft</div>` : ''}
+                    </div>
+                    <div class="property-footer">
+                        <div class="property-price">${p.price_display || PropertyStore.formatINR(p.price)}</div>
+                        <a href="property.html?id=${p.id}" class="btn btn-outline btn-sm">View Estate</a>
+                    </div>
+                </div>
+            </article>
+        `;
+    }).join('');
+
+    // Synchronize Site Settings
+    const s = PropertyStore.getSettings();
+    if (s.contact_phone) {
+        document.querySelectorAll('.live-site-phone').forEach(el => {
+            el.textContent = s.contact_phone;
+            if (el.tagName === 'A') el.href = 'tel:' + s.contact_phone.replace(/\s+/g, '');
+        });
+    }
 }
 
-[kwInput, catSelect, statSelect, budSelect].forEach(el => {
-    el.addEventListener('input', filterCards);
-    el.addEventListener('change', filterCards);
+function filterCards() {
+    renderCatalog();
+}
+
+function resetFilters() {
+    document.getElementById('f-kw').value = '';
+    document.getElementById('f-cat').value = '';
+    document.getElementById('f-status').value = '';
+    document.getElementById('f-budget').value = '';
+    renderCatalog();
+}
+
+// Parse URL search parameters on first load (e.g. from homepage search bar)
+document.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('location')) {
+        document.getElementById('f-kw').value = params.get('location');
+    }
+    if (params.get('category')) {
+        document.getElementById('f-cat').value = params.get('category');
+    }
+    renderCatalog();
+
+    ['f-kw', 'f-cat', 'f-status', 'f-budget'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+            el.addEventListener('input', filterCards);
+            el.addEventListener('change', filterCards);
+        }
+    });
+
+    document.getElementById('btn-reset').addEventListener('click', resetFilters);
 });
 
-resetBtn.addEventListener('click', () => {
-    kwInput.value = '';
-    catSelect.value = '';
-    statSelect.value = '';
-    budSelect.value = '';
-    filterCards();
-});
+// React live when properties are added or edited in the Admin panel!
+window.addEventListener('storage', renderCatalog);
 </script>
-<script src="assets/js/main.js"></script>
 </body>
 </html>
-

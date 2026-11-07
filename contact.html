@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Contact Concierge | Magaram Real Estate</title>
+    <title>Contact Concierge | Magaram Real Estate Coimbatore</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -21,7 +21,7 @@
             <a href="contact.html" class="nav-link active">Contact</a>
         </nav>
         <div class="nav-actions">
-            <a href="tel:+919876543210" class="nav-link phone-link" style="font-size: 0.85rem; color: var(--gold-bright);">+91 98765 43210</a>
+            <a href="tel:+919843012345" class="nav-link phone-link live-site-phone" style="font-size: 0.85rem; color: var(--gold-bright);">+91 98430 12345</a>
             <button type="button" class="btn btn-primary btn-sm" data-open-modal="modal-site-visit">Book Site Visit</button>
             <button class="menu-toggle" aria-label="Toggle Navigation">&#9776;</button>
         </div>
@@ -33,7 +33,7 @@
         <span class="section-tag">Direct Access</span>
         <h1 style="font-size: 3.2rem; margin-bottom: 14px;">The Private Concierge</h1>
         <p style="color: var(--text-muted); max-width: 680px; margin: 0 auto; font-size: 1.1rem;">
-            Whether inquiring regarding an acquisition, scheduling a discreet private viewing, or seeking advisory on a trophy asset.
+            Whether inquiring regarding an acquisition, scheduling a discreet private viewing, or seeking advisory on a Coimbatore trophy asset.
         </p>
     </div>
 </div>
@@ -49,7 +49,7 @@
                     <span class="info-icon">&#9906;</span>
                     <div>
                         <strong style="color: var(--gold-bright);">Office Headquarters:</strong>
-                        <p style="color: var(--text-muted); margin-top: 4px;">Magaram Towers, Level 14, Prestige Boulevard, Jubilee Hills, Hyderabad</p>
+                        <p class="live-site-address" style="color: var(--text-muted); margin-top: 4px;">Magaram Towers, Level 5, Race Course Road, Coimbatore, Tamil Nadu - 641018</p>
                     </div>
                 </div>
 
@@ -58,7 +58,7 @@
                     <div>
                         <strong style="color: var(--gold-bright);">Direct Phone:</strong>
                         <p style="margin-top: 4px;">
-                            <a href="tel:+919876543210" style="color: var(--text-cream); font-weight: 600;">+91 98765 43210</a>
+                            <a href="tel:+919843012345" class="live-site-phone" style="color: var(--text-cream); font-weight: 600;">+91 98430 12345</a>
                         </p>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                     <div>
                         <strong style="color: var(--gold-bright);">Confidential Email:</strong>
                         <p style="margin-top: 4px;">
-                            <a href="mailto:contact@magaramrealestate.com" style="color: var(--text-cream);">contact@magaramrealestate.com</a>
+                            <a href="mailto:contact@magaramrealestate.com" class="live-site-email" style="color: var(--text-cream);">contact@magaramrealestate.com</a>
                         </p>
                     </div>
                 </div>
@@ -87,26 +87,28 @@
             <h3 style="font-size: 1.6rem; margin-bottom: 16px; color: var(--gold-bright);">Submit a Private Inquiry</h3>
             <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px;">All submissions are encrypted and routed directly to our Managing Director's desk.</p>
 
-            <form class="luxury-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you. Your inquiry has been received by our private office.');">
+            <form class="luxury-form ajax-enquiry-form" action="api/enquiry.php" method="POST">
+                <input type="hidden" name="type" value="Enquiry">
+                <input type="text" name="website_url_hp" class="hp-field" tabindex="-1" autocomplete="off">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="c-name">Full Name *</label>
-                        <input type="text" id="c-name" class="form-control" placeholder="Vikramaditya Rao" required>
+                        <input type="text" id="c-name" name="name" class="form-control" placeholder="Vikramaditya Rao" required>
                     </div>
                     <div class="form-group">
                         <label for="c-phone">Phone Number *</label>
-                        <input type="tel" id="c-phone" class="form-control" placeholder="+91 98765 00000" required>
+                        <input type="tel" id="c-phone" name="phone" class="form-control" placeholder="+91 98430 00000" required>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="c-email">Email Address *</label>
-                    <input type="email" id="c-email" class="form-control" placeholder="client@domain.com" required>
+                    <input type="email" id="c-email" name="email" class="form-control" placeholder="client@domain.com" required>
                 </div>
 
                 <div class="form-group">
                     <label for="c-interest">Area of Interest</label>
-                    <select id="c-interest" class="form-control">
+                    <select id="c-interest" name="category" class="form-control">
                         <option value="Residential">Ultra-Luxury Residential / Penthouse</option>
                         <option value="Villa">Signature Villa Estate</option>
                         <option value="Commercial">Commercial / Corporate Headquarters</option>
@@ -116,7 +118,7 @@
 
                 <div class="form-group">
                     <label for="c-message">Confidential Notes / Requirements</label>
-                    <textarea id="c-message" class="form-control" rows="4" placeholder="Detail your parameters, preferred timeline, and communication preferences..."></textarea>
+                    <textarea id="c-message" name="message" class="form-control" rows="4" placeholder="Detail your parameters, preferred Coimbatore locality (Race Course, R.S. Puram, etc.), and timeline..."></textarea>
                 </div>
 
                 <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
@@ -128,9 +130,9 @@
 
     <div style="border-radius: 8px; overflow: hidden; border: 1px solid var(--border-gold); height: 420px; box-shadow: 0 15px 40px rgba(0,0,0,0.8);">
         <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.6669939527643!2d78.40698717594732!3d17.42777170163351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb96cd3d1f1f1f%3A0x8898124231234567!2sJubilee%20Hills%2C%20Hyderabad!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
-            title="Magaram Real Estate Office Map" 
-            style="width: 100%; height: 100%; border: 0; filter: invert(90%) hue-rotate(180deg) contrast(120%);"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.326292398491!2d76.9712165757467!3d11.01183348915159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859ad33cfd2db%3A0x8aa50c60f4ff2b7!2sRace%20Course%2C%20Coimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+            title="Magaram Real Estate Race Course Coimbatore Location" 
+            style="width: 100%; height: 100%; border: 0;"
             loading="lazy" 
             allowfullscreen>
         </iframe>
@@ -139,11 +141,36 @@
 
 <footer class="site-footer">
     <div class="container text-center" style="padding-bottom: 30px;">
-        &copy; 2026 Magaram Real Estate. All Rights Reserved.
+        &copy; 2026 Magaram Real Estate. All Rights Reserved. &bull; Race Course Road, Coimbatore
     </div>
 </footer>
 
+<script src="assets/js/properties-store.js"></script>
 <script src="assets/js/main.js"></script>
+<script>
+function syncSettings() {
+    if (typeof PropertyStore === 'undefined') return;
+    const s = PropertyStore.getSettings();
+    if (s.contact_phone) {
+        document.querySelectorAll('.live-site-phone').forEach(el => {
+            el.textContent = s.contact_phone;
+            if (el.tagName === 'A') el.href = 'tel:' + s.contact_phone.replace(/\s+/g, '');
+        });
+    }
+    if (s.contact_email) {
+        document.querySelectorAll('.live-site-email').forEach(el => {
+            el.textContent = s.contact_email;
+            if (el.tagName === 'A') el.href = 'mailto:' + s.contact_email;
+        });
+    }
+    if (s.office_address) {
+        document.querySelectorAll('.live-site-address').forEach(el => {
+            el.textContent = s.office_address;
+        });
+    }
+}
+document.addEventListener('DOMContentLoaded', syncSettings);
+window.addEventListener('storage', syncSettings);
+</script>
 </body>
 </html>
-

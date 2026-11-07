@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="referrer" content="no-referrer">
     <title>Magaram Real Estate | Curating Extraordinary Living Spaces</title>
     <meta name="description" content="Bespoke residences, signature penthouses, and prime commercial estates crafted with architectural precision.">
     
@@ -569,6 +570,7 @@
                 </h3>
                 
                 <form class="luxury-form ajax-enquiry-form" action="#" method="POST">
+                    <input type="hidden" name="type" value="Enquiry">
                     <input type="text" name="website_url_hp" class="hp-field" tabindex="-1" autocomplete="off">
 
                     <div class="form-row">
@@ -708,6 +710,7 @@
         </div>
 
         <form class="luxury-form ajax-enquiry-form" action="#" method="POST">
+            <input type="hidden" name="type" value="Brochure">
             <input type="text" name="website_url_hp" class="hp-field" tabindex="-1" autocomplete="off">
 
             <div class="form-row">
@@ -757,6 +760,7 @@
         </div>
 
         <form class="luxury-form ajax-enquiry-form" action="#" method="POST">
+            <input type="hidden" name="type" value="Brochure">
             <input type="text" name="website_url_hp" class="hp-field" tabindex="-1" autocomplete="off">
 
             <div class="form-group">
@@ -782,11 +786,25 @@
 </div>
 
 <!-- JavaScript Core & Live Sync Engine -->
-<script src="assets/js/properties-store.js"></script>
-<script src="assets/js/main.js"></script>
-<script src="assets/js/sparkle.js"></script>
+<script src="assets/js/properties-store.js?v=2.2"></script>
+<script src="assets/js/main.js?v=2.2"></script>
+<script src="assets/js/sparkle.js?v=2.2"></script>
 
 <script>
+function handleImageFallback(img, original) {
+    if (img.dataset.failed) {
+        img.src = 'assets/img/property-1.svg';
+        return;
+    }
+    img.dataset.failed = '1';
+    const m = (original || img.src).match(/\/d\/([a-zA-Z0-9_-]+)/) || (original || img.src).match(/id=([a-zA-Z0-9_-]+)/);
+    if (m && m[1]) {
+        img.src = 'https://drive.google.com/thumbnail?id=' + m[1] + '&sz=w1600';
+    } else {
+        img.src = 'assets/img/property-1.svg';
+    }
+}
+
 // Dynamic Homepage Hydration & Real-Time Sync with Admin Panel
 function renderLiveHomepage() {
     if (typeof PropertyStore === 'undefined') return;
@@ -799,7 +817,7 @@ function renderLiveHomepage() {
             container.innerHTML = featured.map(p => `
                 <article class="property-card">
                     <div class="property-image-box">
-                        <img src="${PropertyStore.formatImageURL(p.cover_image)}" alt="${p.title}" loading="lazy" onerror="this.src='assets/img/property-1.svg'">
+                        <img src="${PropertyStore.formatImageURL(p.cover_image)}" alt="${p.title}" loading="lazy" referrerpolicy="no-referrer" onerror="handleImageFallback(this, '${p.cover_image || ''}')">
                         <span class="property-badge">${p.category}</span>
                         <span class="property-status-badge ${p.status === 'Available' ? 'status-available' : (p.status === 'Upcoming' ? 'status-upcoming' : 'status-sold')}">${p.status}</span>
                     </div>

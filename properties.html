@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="referrer" content="no-referrer">
     <title>Exclusive Coimbatore Properties | Magaram Real Estate</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -145,10 +146,24 @@
 </div>
 
 <!-- Load Data Store & Main Scripts -->
-<script src="assets/js/properties-store.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="assets/js/properties-store.js?v=2.2"></script>
+<script src="assets/js/main.js?v=2.2"></script>
 
 <script>
+function handleImageFallback(img, original) {
+    if (img.dataset.failed) {
+        img.src = 'assets/img/property-1.svg';
+        return;
+    }
+    img.dataset.failed = '1';
+    const m = (original || img.src).match(/\/d\/([a-zA-Z0-9_-]+)/) || (original || img.src).match(/id=([a-zA-Z0-9_-]+)/);
+    if (m && m[1]) {
+        img.src = 'https://drive.google.com/thumbnail?id=' + m[1] + '&sz=w1600';
+    } else {
+        img.src = 'assets/img/property-1.svg';
+    }
+}
+
 // Dynamic Catalog Renderer & Filter
 function renderCatalog() {
     if (typeof PropertyStore === 'undefined') return;
@@ -189,7 +204,7 @@ function renderCatalog() {
         return `
             <article class="property-card" data-cat="${p.category}" data-status="${p.status}">
                 <div class="property-image-box">
-                    <img src="${PropertyStore.formatImageURL(p.cover_image)}" alt="${p.title}" loading="lazy" onerror="this.src='assets/img/property-1.svg'">
+                    <img src="${PropertyStore.formatImageURL(p.cover_image)}" alt="${p.title}" loading="lazy" referrerpolicy="no-referrer" onerror="handleImageFallback(this, '${p.cover_image || ''}')">
                     <span class="property-badge">${p.category}</span>
                     <span class="property-status-badge ${statusClass}">${p.status}</span>
                 </div>
